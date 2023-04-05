@@ -1,0 +1,44 @@
+# docker-compose.yml
+
+version: '3.8'
+
+services:
+  web:
+    build: .
+    command:  uvicorn WebCore.main:app --host 0.0.0.0 
+    restart: always
+    volumes:
+      - .:/code
+    ports:
+      - 8008:8000
+    environment:
+      - .env
+
+    depends_on:
+      - db
+    networks:
+      - webcore
+
+
+
+  db:
+    image: postgres:13-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    ports:
+    - "5432:5432"  
+    environment:
+      POSTGRES_USER: "local"
+      POSTGRES_PASSWORD: "6WkFt5B&"
+      POSTGRES_DB: "local_db"
+    networks:
+      - webcore
+
+
+volumes:
+  postgres_data:
+
+networks:
+  webcore:
+    name: webcore
+    driver: bridge

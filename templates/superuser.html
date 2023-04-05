@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block MainBody %}
+<body>
+    
+    <div class="page-loading active" id="loader" style="display: none;">
+        <div class="page-loading-inner">
+          <div class="page-spinner"></div><span>Loading...</span>
+        </div>
+      </div>
+    <main class="page-wrapper">
+        <!-- Page content -->
+        <section class="position-relative h-100 pt-5 pb-4">
+            <div class="d-flex flex-wrap justify-content-center justify-content-xl-start h-100 pt-5">
+                <div class="w-100 align-self-end pt-1 pt-md-4 pb-4">
+                <h1 class="text-center text-xl-start">Superuser page</h1>
+                <p class="text-center text-xl-start pb-3 mb-3">For createing worker. <a href="/user/create_worker/">Create Worker.</a></p>
+                
+                    <br>
+                    <br>
+                    <h3> Job Status</h3>
+                    <table id="process_jobs" class="process_jobs"></table>
+
+                    <!-- <h3> Initiated Job </h3>
+                    <table id="initiated_post_table">
+                    </table>
+                    <br>
+                    <br>
+                    <h3> Waiting for approval </h3>
+                    <table id="waiting_for_approval_post_table">
+                    </table>
+                    <br>
+                    <br>
+                    <h3> Approved(Need to assign to worker) </h3>
+                    <table id="approved_post_table">
+                    </table>
+                    <br>
+                    <br>
+
+                    <h3> Processing Job </h3>
+                    <table id="processing_post_table">
+                    </table>
+                    <br>
+                    <br>
+
+                    <div class="row">
+                        <p id="download_file-id" class="d-none text-danger font-weight-bold"></p>
+                    </div>
+                    <h3>Completed</h3>
+                    <table id="completed_post_table">
+                    </table>
+
+
+                    <br>
+                    <br>
+                    <h3> Rejected </h3>
+                    <table id="rejected_post_table">
+                    </table> -->
+                </div>
+            </div>
+            <!-- Background -->
+            <!-- <div class="position-absolute top-0 end-0 w-50 h-100 bg-position-center bg-repeat-0 bg-size-cover d-none d-xl-block" style="background-image: url({{ url_for('static',path='assets/img/account/signin-bg.jpg')}} )"></div> -->
+        </section>
+    </main>
+</body>
+
+
+
+
+{% endblock MainBody %}

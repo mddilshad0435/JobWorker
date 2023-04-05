@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block MainBody %}
+<body>
+    <div class="page-loading active" id="loader" style="display: none;">
+        <div class="page-loading-inner">
+          <div class="page-spinner"></div><span>Loading...</span>
+        </div>
+      </div>
+    <main class="page-wrapper">
+
+        <!-- Page content -->
+        <section class="position-relative h-100 pt-5 pb-4">
+            <div class=" d-flex flex-wrap justify-content-center justify-content-xl-start h-100 pt-5">
+                <div class="w-100 align-self-end pt-1 pt-md-4 pb-4">
+                  <h1 class="text-center text-xl-start">Worker Page</h1>
+                    <div class="row">
+                        <p id="credentials-id-error-txt" class="d-none text-danger font-weight-bold"></p>
+                    </div>
+                    <br>
+                    <br>
+                    <h3>All job</h3>
+                    <table id="all_job" class="process_jobs">
+                    </table>
+
+                </div>
+            </div>
+            <!-- Background -->
+            <!-- <div class="position-absolute top-0 end-0 w-50 h-100 bg-position-center bg-repeat-0 bg-size-cover d-none d-xl-block" style="background-image: url({{ url_for('static',path='assets/img/account/signin-bg.jpg')}} )"></div> -->
+        </section>
+    </main>
+</body>
+{% endblock MainBody %}
