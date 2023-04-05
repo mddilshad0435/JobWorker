@@ -1,9 +1,9 @@
-# WebCore
-Main PerceptionAI Website
+# JobWorker
+Job Create assigned and to worker by admin with status
 
 ### Clone project use follwing command
 ```
-git clone https://github.com/PerceptionAI/WebCore.git
+git clone https://github.com/mddilshad0435/JobWorker.git
 ```
 change the branch to master
 
